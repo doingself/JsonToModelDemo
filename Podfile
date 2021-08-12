@@ -6,5 +6,9 @@ target 'JsonToModelDemo' do
   use_frameworks!
 
   # Pods for JsonToModelDemo
-
+  pod 'SnapKit'
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper'
+  pod 'HandyJSON'
+  
 end

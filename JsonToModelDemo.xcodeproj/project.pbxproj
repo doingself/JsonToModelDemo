@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		1960C53E26C4C87A00363A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1960C53C26C4C87A00363A0D /* Main.storyboard */; };
 		1960C54026C4C87C00363A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1960C53F26C4C87C00363A0D /* Assets.xcassets */; };
 		1960C54326C4C87C00363A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1960C54126C4C87C00363A0D /* LaunchScreen.storyboard */; };
+		1960C54B26C50FBC00363A0D /* SwiftyJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960C54A26C50FBC00363A0D /* SwiftyJSONModel.swift */; };
+		1960C54D26C50FDF00363A0D /* ObjectMapperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960C54C26C50FDF00363A0D /* ObjectMapperModel.swift */; };
+		1960C54F26C50FFA00363A0D /* HandyJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960C54E26C50FFA00363A0D /* HandyJSONModel.swift */; };
+		1960C55126C5100F00363A0D /* JSONDecoderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960C55026C5100F00363A0D /* JSONDecoderModel.swift */; };
 		619BFB60737F875F84A83728 /* Pods_JsonToModelDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3CFF3626FF0C7EAAD016FF /* Pods_JsonToModelDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		1960C53F26C4C87C00363A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1960C54226C4C87C00363A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1960C54426C4C87C00363A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1960C54A26C50FBC00363A0D /* SwiftyJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSONModel.swift; sourceTree = "<group>"; };
+		1960C54C26C50FDF00363A0D /* ObjectMapperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperModel.swift; sourceTree = "<group>"; };
+		1960C54E26C50FFA00363A0D /* HandyJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJSONModel.swift; sourceTree = "<group>"; };
+		1960C55026C5100F00363A0D /* JSONDecoderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderModel.swift; sourceTree = "<group>"; };
 		538343BC1706D7D2AC5001AF /* Pods-JsonToModelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonToModelDemo.debug.xcconfig"; path = "Target Support Files/Pods-JsonToModelDemo/Pods-JsonToModelDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		ED3CFF3626FF0C7EAAD016FF /* Pods_JsonToModelDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JsonToModelDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE22FC559F77EF17C2BD2D14 /* Pods-JsonToModelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonToModelDemo.release.xcconfig"; path = "Target Support Files/Pods-JsonToModelDemo/Pods-JsonToModelDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +74,10 @@
 				1960C53626C4C87A00363A0D /* AppDelegate.swift */,
 				1960C53826C4C87A00363A0D /* SceneDelegate.swift */,
 				1960C53A26C4C87A00363A0D /* ViewController.swift */,
+				1960C55026C5100F00363A0D /* JSONDecoderModel.swift */,
+				1960C54E26C50FFA00363A0D /* HandyJSONModel.swift */,
+				1960C54C26C50FDF00363A0D /* ObjectMapperModel.swift */,
+				1960C54A26C50FBC00363A0D /* SwiftyJSONModel.swift */,
 				1960C53C26C4C87A00363A0D /* Main.storyboard */,
 				1960C53F26C4C87C00363A0D /* Assets.xcassets */,
 				1960C54126C4C87C00363A0D /* LaunchScreen.storyboard */,
@@ -88,7 +100,6 @@
 				538343BC1706D7D2AC5001AF /* Pods-JsonToModelDemo.debug.xcconfig */,
 				FE22FC559F77EF17C2BD2D14 /* Pods-JsonToModelDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,6 +114,7 @@
 				1960C52F26C4C87A00363A0D /* Sources */,
 				1960C53026C4C87A00363A0D /* Frameworks */,
 				1960C53126C4C87A00363A0D /* Resources */,
+				C760CC50962D158B9106B538 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +193,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C760CC50962D158B9106B538 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JsonToModelDemo/Pods-JsonToModelDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JsonToModelDemo/Pods-JsonToModelDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JsonToModelDemo/Pods-JsonToModelDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,8 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1960C54D26C50FDF00363A0D /* ObjectMapperModel.swift in Sources */,
 				1960C53B26C4C87A00363A0D /* ViewController.swift in Sources */,
+				1960C54B26C50FBC00363A0D /* SwiftyJSONModel.swift in Sources */,
 				1960C53726C4C87A00363A0D /* AppDelegate.swift in Sources */,
+				1960C55126C5100F00363A0D /* JSONDecoderModel.swift in Sources */,
+				1960C54F26C50FFA00363A0D /* HandyJSONModel.swift in Sources */,
 				1960C53926C4C87A00363A0D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
