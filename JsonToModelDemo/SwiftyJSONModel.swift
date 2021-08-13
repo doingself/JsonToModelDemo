@@ -19,14 +19,12 @@ struct SwiftyJSONModel {
         let height = json["data"]["height"].doubleValue
         let weight = json["data"]["weight"].doubleValue
         let birthday = json["data"]["birthday"].stringValue
+        let date = json["data"]["date"].doubleValue
         let url = json["data"]["url"].stringValue
         let status = json["data"]["status"].intValue
-        let list = json["data"]["list"].array
-        let listArr = list?.compactMap { (json: JSON) -> Int in
-            return json.intValue
-        }
+        let list = json["data"]["list"].arrayValue.map { $0.intValue }
         
-        let data = SwiftyJSONDataModel(id: id, name: name, height: height, weight: weight, birthday: birthday, url: url, status: SwiftyJSONDataModel.StatusEnum(rawValue: status), list: listArr)
+        let data = SwiftyJSONDataModel(id: id, name: name, height: height, weight: weight, birthday: birthday, date: date, url: url, status: SwiftyJSONDataModel.StatusEnum(rawValue: status), list: list)
         
         self.code = json["code"].intValue
         self.message = json["message"].stringValue
@@ -40,6 +38,7 @@ struct SwiftyJSONDataModel {
     let height: Double?
     let weight: Double?
     let birthday: String?
+    let date: Double?
     let url: String?
     let status: StatusEnum?
     let list: [Int]?

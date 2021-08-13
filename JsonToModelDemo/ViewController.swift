@@ -15,7 +15,8 @@ let jsonDict: [String: Any] = [
         "id": 123,
         "name": "haha",
         "height": 123.456,
-        "birthday": "2021-08-09",
+        "birthday": "2021-08-10",
+        "date": 1628839481521.123,
         "url": "https://abc.def.com",
         "status": 10,
         "list": [1,2,3,4]
@@ -175,7 +176,12 @@ extension ViewController {
 import ObjectMapper
 extension ViewController {
     @objc func ObjectMapperButtonAction(){
-        
+        let model = ObjectMapperModel(JSON: jsonDict)
+        let str = model?.toJSONString(prettyPrint: true)
+        print(model?.data?.birthday)
+        print(model?.data?.date)
+        print(str)
+        infoLabel.text = "\(model?.data?.weight) == \(str)"
     }
 }
 
