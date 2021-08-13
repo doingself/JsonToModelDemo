@@ -18,7 +18,7 @@ let jsonDict: [String: Any] = [
         "birthday": "2021-08-10",
         "date": 1628839481521.123,
         "url": "https://abc.def.com",
-        "status": 10,
+        "status": 30,
         "list": [1,2,3,4]
     ]
 ]
@@ -146,7 +146,13 @@ extension ViewController {
             let jsonData = try encoder.encode(model)
             let str = String(data: jsonData, encoding: String.Encoding.utf8)
             
-            infoLabel.text = "\(model.data?.weight) == \(str ?? "null")"
+            print("==== Codable ====")
+            print(model.data?.birthday)
+            print(model.data?.date)
+            print(model.data?.weight)
+            print(str)
+            infoLabel.text = str
+            
         } catch {
             print(error)
         }
@@ -164,7 +170,12 @@ extension ViewController {
             
             let model = SwiftyJSONModel(json: json)
             
-            infoLabel.text = "\(model.data?.weight) == \(model)"
+            print("==== SwiftyJSON ====")
+            print(model.data?.birthday)
+            print(model.data?.date)
+            print(model.data?.weight)
+            print(model)
+            infoLabel.text = "\(model)"
             
         } catch {
             print(error)
@@ -177,11 +188,13 @@ import ObjectMapper
 extension ViewController {
     @objc func ObjectMapperButtonAction(){
         let model = ObjectMapperModel(JSON: jsonDict)
-        let str = model?.toJSONString(prettyPrint: true)
+        let str = model?.toJSONString(prettyPrint: true) // ObjectMapper
+        print("==== ObjectMapper ====")
         print(model?.data?.birthday)
         print(model?.data?.date)
+        print(model?.data?.weight)
         print(str)
-        infoLabel.text = "\(model?.data?.weight) == \(str)"
+        infoLabel.text = str
     }
 }
 
@@ -189,6 +202,17 @@ extension ViewController {
 import HandyJSON
 extension ViewController {
     @objc func HandyJSONButtonAction(){
+        let model = HandyJSONModel.deserialize(from: jsonDict)
         
+        let str = model?.toJSONString(prettyPrint: true) // HandyJSON
+        
+        print("==== HandyJSON ====")
+        print(model?.data?.dataId)
+        print(model?.data?.status)
+        print(model?.data?.birthday)
+        print(model?.data?.date)
+        print(model?.data?.weight)
+        print(str)
+        infoLabel.text = str
     }
 }

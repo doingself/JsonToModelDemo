@@ -43,7 +43,7 @@ struct SwiftyJSONDataModel {
     let status: StatusEnum?
     let list: [Int]?
     
-    enum StatusEnum: Int, Codable {
+    enum StatusEnum: Int {
         case ten = 10
         case twenty = 20
         case thirty = 30

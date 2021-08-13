@@ -36,7 +36,7 @@ struct ObjectMapperDataModel: Mappable {
     var status: StatusEnum?
     var list: [Int]?
     
-    enum StatusEnum: Int, Codable {
+    enum StatusEnum: Int {
         case ten = 10
         case twenty = 20
         case thirty = 30
