@@ -144,7 +144,8 @@ extension ViewController {
             let encoder = JSONEncoder()
             let jsonData = try encoder.encode(model)
             let str = String(data: jsonData, encoding: String.Encoding.utf8)
-            infoLabel.text = str
+            
+            infoLabel.text = "\(model.data?.weight) == \(str ?? "null")"
         } catch {
             print(error)
         }
@@ -155,7 +156,18 @@ extension ViewController {
 import SwiftyJSON
 extension ViewController {
     @objc func SwiftyJSONButtonAction(){
-        
+        do {
+            let data = try JSONSerialization.data(withJSONObject: jsonDict, options: JSONSerialization.WritingOptions.prettyPrinted)
+            
+            let json = try JSON(data: data)
+            
+            let model = SwiftyJSONModel(json: json)
+            
+            infoLabel.text = "\(model.data?.weight) == \(model)"
+            
+        } catch {
+            print(error)
+        }
     }
 }
 

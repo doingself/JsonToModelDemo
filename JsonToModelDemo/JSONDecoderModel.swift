@@ -17,6 +17,7 @@ struct JSONDecoderDataModel: Codable {
     let id: Int?
     let name: String?
     let height: Double?
+    let weight: Double?
     let birthday: String?
     let url: String?
     let status: StatusEnum?
