@@ -16,7 +16,7 @@ struct SwiftyJSONModel {
     init(json: JSON){
         let id = json["data"]["id"].intValue
         let name = json["data"]["name"].stringValue
-        let height = json["data"]["height"].doubleValue
+        let height = json["data"]["height"].intValue
         let weight = json["data"]["weight"].doubleValue
         let birthday = json["data"]["birthday"].stringValue
         let date = json["data"]["date"].doubleValue
@@ -35,7 +35,7 @@ struct SwiftyJSONModel {
 struct SwiftyJSONDataModel {
     let id: Int?
     let name: String?
-    let height: Double?
+    let height: Int?
     let weight: Double?
     let birthday: String?
     let date: Double?

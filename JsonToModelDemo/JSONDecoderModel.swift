@@ -31,3 +31,29 @@ struct JSONDecoderDataModel: Codable {
         case forty = 40
     }
 }
+
+
+struct CodableEnumModel: Codable {
+    let code: CodableEnum?
+    let message: CodableEnum?
+    let data: CodableEnumDataModel?
+}
+
+struct CodableEnumDataModel: Codable {
+    let id: CodableEnum?
+    let name: CodableEnum?
+    let height: CodableEnum?
+    let weight: CodableEnum?
+    let birthday: CodableEnum?
+    let date: CodableEnum?
+    let url: CodableEnum?
+    let status: StatusEnum?
+    let list: CodableEnum?
+    
+    enum StatusEnum: Int, Codable {
+        case ten = 10
+        case twenty = 20
+        case thirty = 30
+        case forty = 40
+    }
+}

@@ -17,6 +17,7 @@
 		1960C54D26C50FDF00363A0D /* ObjectMapperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960C54C26C50FDF00363A0D /* ObjectMapperModel.swift */; };
 		1960C54F26C50FFA00363A0D /* HandyJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960C54E26C50FFA00363A0D /* HandyJSONModel.swift */; };
 		1960C55126C5100F00363A0D /* JSONDecoderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960C55026C5100F00363A0D /* JSONDecoderModel.swift */; };
+		1960C55326C7648800363A0D /* CodableEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960C55226C7648800363A0D /* CodableEnum.swift */; };
 		619BFB60737F875F84A83728 /* Pods_JsonToModelDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3CFF3626FF0C7EAAD016FF /* Pods_JsonToModelDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		1960C54C26C50FDF00363A0D /* ObjectMapperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperModel.swift; sourceTree = "<group>"; };
 		1960C54E26C50FFA00363A0D /* HandyJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJSONModel.swift; sourceTree = "<group>"; };
 		1960C55026C5100F00363A0D /* JSONDecoderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderModel.swift; sourceTree = "<group>"; };
+		1960C55226C7648800363A0D /* CodableEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableEnum.swift; sourceTree = "<group>"; };
 		538343BC1706D7D2AC5001AF /* Pods-JsonToModelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonToModelDemo.debug.xcconfig"; path = "Target Support Files/Pods-JsonToModelDemo/Pods-JsonToModelDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		ED3CFF3626FF0C7EAAD016FF /* Pods_JsonToModelDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JsonToModelDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE22FC559F77EF17C2BD2D14 /* Pods-JsonToModelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonToModelDemo.release.xcconfig"; path = "Target Support Files/Pods-JsonToModelDemo/Pods-JsonToModelDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				1960C53626C4C87A00363A0D /* AppDelegate.swift */,
 				1960C53826C4C87A00363A0D /* SceneDelegate.swift */,
 				1960C53A26C4C87A00363A0D /* ViewController.swift */,
+				1960C55226C7648800363A0D /* CodableEnum.swift */,
 				1960C55026C5100F00363A0D /* JSONDecoderModel.swift */,
 				1960C54E26C50FFA00363A0D /* HandyJSONModel.swift */,
 				1960C54C26C50FDF00363A0D /* ObjectMapperModel.swift */,
@@ -220,6 +223,7 @@
 				1960C54D26C50FDF00363A0D /* ObjectMapperModel.swift in Sources */,
 				1960C53B26C4C87A00363A0D /* ViewController.swift in Sources */,
 				1960C54B26C50FBC00363A0D /* SwiftyJSONModel.swift in Sources */,
+				1960C55326C7648800363A0D /* CodableEnum.swift in Sources */,
 				1960C53726C4C87A00363A0D /* AppDelegate.swift in Sources */,
 				1960C55126C5100F00363A0D /* JSONDecoderModel.swift in Sources */,
 				1960C54F26C50FFA00363A0D /* HandyJSONModel.swift in Sources */,
